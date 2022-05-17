@@ -6,7 +6,7 @@ export default function TasksList({ allTasks, handleDelete }) {
       {allTasks.map(({ title, description, id }) => (
         <li key={id}>
           <div>
-            <h2>{title}</h2>
+            <h4>{title}</h4>
             <button onClick={() => handleDelete(id)}>X</button>
           </div>
           {!description ? null : <p>{description}</p>}

@@ -22,9 +22,15 @@ export default function AppFunction() {
       setAllTasks((prev) => {
         return [newTask, ...prev]
       })
+      setNewTask({})
     }
   }
 
+  const handleDelete = (taskIdToRemove) => {
+    setAllTasks((prev) => prev.filter(
+      task => task.id !== taskIdToRemove)
+    )
+  }
 
   return (
     <main>
@@ -36,7 +42,7 @@ export default function AppFunction() {
       />
       <TasksList
         allTasks={allTasks}
-        // handleDelete={ }
+        handleDelete={handleDelete}
       />
     </main>
   );
