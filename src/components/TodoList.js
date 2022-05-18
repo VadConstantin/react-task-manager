@@ -22,7 +22,7 @@ const TodoList = () => {
 
   const handleDelete = (taskToDelete) =>  {
     setTaskList((prev) => {
-      return prev.filter(t => t.title !== taskToDelete.title)
+      return prev.filter(t => t.date !== taskToDelete.date)
     })
   }
 
@@ -46,11 +46,13 @@ const TodoList = () => {
         <p>List of tasks:</p>
         <ul>
         {taskList.map((task) => {
-          return <li key={task.title} className="task">
-            {task.title}
-            <small className="date">
-              {task.date ? ` created on ${new Date(task.date).toLocaleString()} ` : ' '}
-            </small>
+          return <li key={task.title} className="task display-flex">
+            <div className="task-infos">
+              {task.title}
+              <small className="date">
+                {task.date ? ` created on ${new Date(task.date).toLocaleString()} ` : ' '}
+              </small>
+            </div>
             <button className="delete-button" onClick={() => handleDelete(task)}>  X</button>
           </li>
 
