@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TaskFunction from './components/TaskFunction'
 import ColorPicker from './components/ChangeColor';
+import TodoList from './components/TodoList'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColorPicker />
+    {/* <ColorPicker /> */}
+    <TodoList name="hello" />
   </React.StrictMode>
 );
 
