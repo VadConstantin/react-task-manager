@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TaskFunction from './components/TaskFunction'
+
 import ColorPicker from './components/ChangeColor';
 import TodoList from './components/TodoList'
 

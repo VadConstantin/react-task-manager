@@ -1,17 +1,18 @@
 .task-list {
   background-color: rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .task {
   background-color: bisque;
   border-radius: 5px;
   padding: 20px;
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .display-flex {
@@ -45,4 +46,16 @@ ul {
   font-size: 10px;
   margin-left: 10px;
   opacity: 0.7;
+}
+
+.btn-primary {
+  background-color: bisque;
+  margin-top: 10px;
+  color: rgb(21, 21, 21);
+  border: 0;
+  padding: 5px 20px;
+}
+
+p {
+  margin-bottom: 0;
 }
