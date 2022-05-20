@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Parent } from './components/Parent';
 import ColorPicker from './components/ChangeColor';
 import TodoList from './components/TodoList'
-import { GuineaPigs } from './components/PigsCarroussel';
+import { GuineaPigsContainer } from './components/PigsCarrousselContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +14,7 @@ root.render(
     <ColorPicker />
     <TodoList />
     < Parent />
-    < GuineaPigs />
+    < GuineaPigsContainer />
 
   </React.StrictMode>
 );
