@@ -5,6 +5,8 @@ const TodoList = () => {
 
   const [ task, setTask ] = useState({})
   const [ taskList, setTaskList ] = useState([])
+  const [ url, setUrl] = useState('https://jsonplaceholder.typicode.com/todos?_limit=50')
+  const [ isPending, setIspending ] = useState(true)
 
   const handleChange = (event) => {
     const name = event.target.name
@@ -26,17 +28,17 @@ const TodoList = () => {
     })
   }
 
-  const url = 'https://jsonplaceholder.typicode.com/todos?_limit=10'
-
   useEffect(() => {
     fetch(url)
       .then (resp => resp.json())
       .then (data => {
         console.log(data);
         setTaskList(data)
+        setIspending(false)
       })
 
-  }, [])
+  }, [url])
+
 
   return(
     <div className="container">
@@ -60,7 +62,8 @@ const TodoList = () => {
       <div className="task-list">
         <p>List of tasks:</p>
         <ul>
-        {taskList.map((task) => {
+        {isPending && <div>Loading...</div>}
+        {!isPending && taskList.map((task) => {
           return <li key={task.id} className="task display-flex">
             <div className="task-infos">
               {task.title}
