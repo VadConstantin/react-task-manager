@@ -5,7 +5,7 @@ const TodoList = () => {
 
   const [ task, setTask ] = useState({})
   const [ taskList, setTaskList ] = useState([])
-  const [ url, setUrl] = useState('https://jsonplaceholder.typicode.com/todos?_limit=50')
+  const [ url, setUrl] = useState('https://jsonplaceholder.typicode.com/todos?_limit=1')
   const [ isPending, setIspending ] = useState(true)
 
   const handleChange = (event) => {
@@ -33,12 +33,10 @@ const TodoList = () => {
       .then (resp => resp.json())
       .then (data => {
         console.log(data);
-        setTaskList(data)
+        // setTaskList(data)
         setIspending(false)
       })
-
   }, [url])
-
 
   return(
     <div className="container">
@@ -73,7 +71,6 @@ const TodoList = () => {
             </div>
             <button className="delete-button" onClick={() => handleDelete(task)}>  X</button>
           </li>
-
         })}
         </ul>
       </div>
