@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Parent } from './components/Parent';
 import ColorPicker from './components/ChangeColor';
 import TodoList from './components/TodoList'
 
@@ -11,7 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <ColorPicker /> */}
-    <TodoList />
+    {/* <TodoList /> */}
+    < Parent />
+
   </React.StrictMode>
 );
 
