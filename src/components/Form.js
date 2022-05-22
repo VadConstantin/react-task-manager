@@ -33,7 +33,7 @@ const Form = () => {
 
       <ul style={{marginTop: 20}}>
         {Object.keys(profile).map((key) => {
-          return <li><strong>{key}:</strong> {profile[key]}</li>
+          return <li><strong>{key}:</strong> {profile[key] === true || false ? String(profile[key]) : profile[key]}</li>
         })}
       </ul>
     </div>
