@@ -7,6 +7,7 @@ import { Parent } from './components/Parent';
 import ColorPicker from './components/ChangeColor';
 import TodoList from './components/TodoList'
 import { GuineaPigsContainer } from './components/PigsCarrousselContainer';
+import Form from './components/Form';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,8 @@ root.render(
     <ColorPicker />
     <TodoList />
     < Parent />
-    < GuineaPigsContainer />
+    {/* < GuineaPigsContainer /> */}
+    < Form />
 
   </React.StrictMode>
 );
