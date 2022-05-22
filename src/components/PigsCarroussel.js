@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export class GuineaPigs extends React.Component {
   render() {
@@ -10,4 +11,7 @@ export class GuineaPigs extends React.Component {
       </div>
     );
   }
+}
+GuineaPigs.propTypes = {
+  src: PropTypes.string.isRequired
 }
