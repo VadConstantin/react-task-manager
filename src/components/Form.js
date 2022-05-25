@@ -17,7 +17,7 @@ const Form = () => {
 
   return (
     <div style={{marginTop: 40}}>
-      <h1>My form</h1>
+      <h1>My React form</h1>
       <div>
         <label htmlFor="prenom"> Prénom</label>
         <input type="text" id="prenom" name="prenom" onChange={handleChange} value={profile.prenom || ''}/>
