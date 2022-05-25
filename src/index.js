@@ -16,7 +16,7 @@ root.render(
     <TodoList />
     < Parent />
     {/* < GuineaPigsContainer /> */}
-    < Form />
+    < Form name="propTypes" />
 
   </React.StrictMode>
 );

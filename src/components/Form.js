@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
 
 
-const Form = () => {
+const Form = (props) => {
 
   const [ profile, setProfile ] = useState({})
 
@@ -17,7 +17,7 @@ const Form = () => {
 
   return (
     <div style={{marginTop: 40}}>
-      <h1>My React form</h1>
+      <h1> My React form with {props.name} </h1>
       <div>
         <label htmlFor="prenom"> Prénom</label>
         <input type="text" id="prenom" name="prenom" onChange={handleChange} value={profile.prenom || ''}/>
@@ -39,6 +39,10 @@ const Form = () => {
     </div>
   )
 
+}
+
+Form.propTypes = {
+  name: PropTypes.string.isRequired
 }
 
 export default Form;
